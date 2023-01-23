@@ -1,0 +1,14 @@
+{
+    "authors": [{
+        "email": "forcawebsuporte@gmail.com",
+        "homepage": "https://www.forcaweb.net",
+        "name": "Força Web",
+        "role": "Aplication make imagens posts"
+    }],
+    "name": "web/edit",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
