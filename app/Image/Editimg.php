@@ -26,7 +26,7 @@ class Editimg{
 
     imagecopy($this->image, $this->watermarker,(int)$positionX,(int)$positionY,0,0,$waterwidth,$waterheight);
     $info = pathinfo($files);
-    $this->type = $info['extension'] == 'jpg' ? 'jpeg' : $info['extension'];
+    $this->type = $info['extension'] == 'jpg' || 'tmp' ? 'jpeg' : $info['extension'];
     }
 
     public function save($localfile, $qualiity = 100){
@@ -36,6 +36,7 @@ class Editimg{
     public function print($qualiity = 100){
         header('Content-Type: image/'.$this->type);
         $this->output(null, $qualiity);
+        
     }
 
     public function output($localfile, $qualiity){
