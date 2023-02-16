@@ -12,6 +12,7 @@ if($imagePost !== null){
             $editimg->save('uploads/'.time().'.jpg');
             sleep(1);
         }
+        echo "Upload Completo.";
     }
     
 }
@@ -29,7 +30,7 @@ if($imagePost !== null){
 <h2>Adicionar Foto</h2>
       <form method="POST" encType="multipart/form-data" action="">
         <label>Fotos do anunciante:</label>
-        <input name="photos[]" id="photos" type="file"  multiple placeholder="Selecione as fotos..." />
+        <input name="photos[]" id="photos" type="file"  multiple placeholder="Selecione as fotos..." accept="image/png,image/jpeg" />
 
         <button type="submit">
           Cadastrar

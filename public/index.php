@@ -1,11 +1,8 @@
 <?php
-
+session_start();
 require_once '../vendor/autoload.php';
-
 require_once '../app/routes/routes.php';
-
-$requestUri = $_SERVER['REQUEST_URI'];
-
+$url = isset($_GET['url']) ? $_GET['url'] : '';
 $router = new Router;
-$router->run($requestUri);
+$router->run($url);
 ?>
